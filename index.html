@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Rock, Paper, Scissors</title>
+  </head>
+  <body>
+    <h1>Let's play Rock, Paper, Scissors</h1>
+   <script>
+    //Player choose
+    var playerSelection = window.prompt("Rock, Paper or Scissors?");
+    
+    //Computer optiopns
+    var computerSelection = ["rock", "paper", "scissors"];
+      let cSelection =
+      computerSelection[Math.floor(Math.random() * computerSelection.length)];
+      
+    
+    //Player choose to case insentive
+    var pSelection = playerSelection.toLocaleLowerCase();
+    alert("You choose " + pSelection);
+    
+    //TIE
+      if (pSelection === cSelection){
+        alert("Computer choose " + cSelection);
+        alert('Tie!');
+      }
+     
+    //Player win
+      else if (pSelection == "scissors" && cSelection == "paper" 
+      || pSelection == "paper" && cSelection == "rock"
+      || pSelection == "rock" && cSelection == "scissors"
+      ) {
+        alert("Computer choose " + cSelection);
+        alert("You win!");
+      } 
+      
+      else if(pSelection !== "scissors" || pSelection !== "paper"
+      || pSelection !== "rock") {
+        alert("Something go wrong!");
+      }
+      
+    
+      else{
+        alert("Computer choose " + cSelection);
+        alert("You lost!");
+      }
+    </script>
+      </body>
+</html>
